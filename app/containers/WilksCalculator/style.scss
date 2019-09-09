@@ -1,5 +1,13 @@
 .wilks-calculator {
-    background: red;
+    background: lightseagreen;
+    display: flex;
+    flex-direction: column;
     min-width: 400px;
+    border-radius: 22px;
     min-height: 300px;
+
+    .wilks-calculator_row {
+        display: flex;
+        flex-direction: row;
+    }
 }
