@@ -1,13 +1,44 @@
 .wilks-calculator {
-    background: lightseagreen;
+  background: lightseagreen;
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+  min-width: 500px;
+  border-radius: 22px;
+  min-height: 300px;
+  text-align: center;
+
+  .input-kg {
+    width: 150px;
+  }
+
+  .wilks-calculator_row {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+  }
+
+  .wilks-calculator_score-row {
+    margin: 20px;
+    font-size: 28px;
     display: flex;
     flex-direction: column;
-    min-width: 400px;
-    border-radius: 22px;
-    min-height: 300px;
+    vertical-align: middle;
+  }
 
-    .wilks-calculator_row {
-        display: flex;
-        flex-direction: row;
-    }
+  .wilks-calculator_score {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .wilks-calculator_left-column {
+    width: 250px;
+    margin-right: 10px;
+    text-align: right;
+  }
+
+  .wilks-calculator_right-column {
+    vertical-align: middle;
+    margin-left: 10px;
+  }
 }
