@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NumericInput from 'react-numeric-input';
 import './style.scss';
 
@@ -11,18 +12,29 @@ export default class WilksCalculator extends React.Component {
   formatWithKg = number => `${number} kg`;
 
   onBodyWeightChanged = value => {
+    const { onWeightChange } = this.props;
+    const { liftedWeight } = this.state;
+
     this.setState({
       bodyWeight: value,
     });
+
+    onWeightChange(value, liftedWeight);
   };
 
   onLiftedWeightChanged = value => {
+    const { onWeightChange } = this.props;
+    const { bodyWeight } = this.state;
+
     this.setState({
       liftedWeight: value,
     });
+
+    onWeightChange(bodyWeight, value);
   };
 
   render() {
+    const { wilksPoints } = this.props;
     const { bodyWeight, liftedWeight } = this.state;
 
     return (
@@ -66,9 +78,14 @@ export default class WilksCalculator extends React.Component {
         </div>
         <div className="wilks-calculator_score-row">
           <div>Punkty Wilks'a:</div>
-          <div className="wilks-calculator_score">12.4</div>
+          <div className="wilks-calculator_score">{wilksPoints || '-'}</div>
         </div>
       </div>
     );
   }
 }
+
+WilksCalculator.propTypes = {
+  wilksPoints: PropTypes.number,
+  onWeightChange: PropTypes.func.isRequired,
+};

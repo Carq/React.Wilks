@@ -9,14 +9,17 @@ import './style.scss';
 const App = () => (
   <div className="app-wrapper">
     <Helmet
-      titleTemplate="%s - React.js Boilerplate"
       defaultTitle="React.Wilks"
+      titleTemplate="%s - React.js Boilerplate"
     >
-      <meta name="description" content="Simple Wilks Calculator (powerlifting) created with React as Progressive Web App." />
+      <meta
+        content="Simple Wilks Calculator (powerlifting) created with React as Progressive Web App."
+        name="description"
+      />
     </Helmet>
     <Switch>
-      <Route exact path="/" component={WilksCalculator} />
-      <Route path="" component={NotFoundPage} />
+      <Route component={WilksCalculator} exact path="/" />
+      <Route component={NotFoundPage} path="" />
     </Switch>
   </div>
 );
