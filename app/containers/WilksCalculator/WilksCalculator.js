@@ -48,10 +48,11 @@ export default class WilksCalculator extends React.Component {
               format={this.formatWithKg}
               max={150}
               min={1}
+              mobile
               placeholder="70.5 kg"
               precision={1}
               step={1}
-              strict
+              type="number"
               value={bodyWeight}
               onChange={this.onBodyWeightChanged}
             />
@@ -67,10 +68,10 @@ export default class WilksCalculator extends React.Component {
               format={this.formatWithKg}
               max={250}
               min={1}
+              mobile
               placeholder="80.5 kg"
               precision={1}
               step={1}
-              strict
               value={liftedWeight}
               onChange={this.onLiftedWeightChanged}
             />

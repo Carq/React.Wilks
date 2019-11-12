@@ -71,3 +71,5 @@ if (module.hot) {
 }
 
 render();
+
+require('offline-plugin/runtime').install();
