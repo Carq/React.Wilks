@@ -9,17 +9,16 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 process.noDeprecation = true;
 
-module.exports = (options) => ({
+module.exports = options => ({
   mode: options.mode,
   entry: options.entry,
   output: Object.assign(
     {
-      // Compile into js/build.js
       path: path.resolve(process.cwd(), 'build'),
-      publicPath: '/'
+      publicPath: '/react.wilks/'
     },
     options.output
-  ), // Merge with env dependent settings
+  ),
   module: {
     rules: [
       {
@@ -87,14 +86,14 @@ module.exports = (options) => ({
       theme_color: '#2196f3',
       icons: [
         {
-          src: path.resolve('app/images/favicon.png'),
+          src: path.resolve('src/images/favicon.png'),
           sizes: [96, 128, 192, 256, 384, 512]
         },
       ]
     })
   ]),
   resolve: {
-    modules: ['app', 'node_modules'],
+    modules: ['src', 'node_modules'],
     extensions: ['.js', '.jsx', '.scss', '.react.js'],
     mainFields: ['browser', 'jsnext:main', 'main']
   },

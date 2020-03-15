@@ -2,7 +2,7 @@
   "name": "react.wilks",
   "version": "1.0.0",
   "description": "Simple Wilks Calculator (powerlifting) created with React as Progressive Web App.",
-  "homepage": "https://carq.github.io/React.Wilks/",
+  "homepage": "https://carq.github.io/React.Wilks",
   "repository": {
     "type": "git",
     "url": "git@github.com:Carq/React.Wilks.git"

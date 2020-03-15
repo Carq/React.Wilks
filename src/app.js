@@ -1,10 +1,3 @@
-/**
- * app.js
- *
- * This is the entry file for the application, only setup and boilerplate
- * code.
- */
-
 // Needed for redux-saga es6 generator support
 import '@babel/polyfill';
 
@@ -14,11 +7,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import FontFaceObserver from 'fontfaceobserver';
-import history from 'utils/history';
+import history from './utils/history';
 import 'sanitize.css/sanitize.css';
 
 // Import root app
-import App from 'containers/App';
+import App from './containers/App';
 
 // Load the favicon
 /* eslint-disable import/no-webpack-loader-syntax */
@@ -26,7 +19,7 @@ import '!file-loader?name=[name].[ext]!./images/favicon.png';
 /* eslint-enable import/no-webpack-loader-syntax */
 
 // Import CSS reset and Global Styles
-import 'styles/theme.scss';
+import './styles/theme.scss';
 
 import configureStore from './configureStore';
 

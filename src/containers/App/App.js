@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Switch, Route } from 'react-router-dom';
 import WilksCalculator from 'containers/WilksCalculator';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import './style.scss';
 
@@ -16,10 +14,7 @@ const App = () => (
         name="description"
       />
     </Helmet>
-    <Switch>
-      <Route component={WilksCalculator} exact path="/" />
-      <Route component={NotFoundPage} path="" />
-    </Switch>
+    <WilksCalculator />
   </div>
 );
 
