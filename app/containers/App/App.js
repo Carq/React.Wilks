@@ -10,7 +10,6 @@ const App = () => (
   <div className="app-wrapper">
     <Helmet
       defaultTitle="React.Wilks"
-      titleTemplate="%s - React.js Boilerplate"
     >
       <meta
         content="Simple Wilks Calculator (powerlifting) created with React as Progressive Web App."
