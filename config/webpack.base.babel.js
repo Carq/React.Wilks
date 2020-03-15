@@ -4,6 +4,8 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const OfflinePlugin = require('offline-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 process.noDeprecation = true;
 
@@ -76,6 +78,19 @@ module.exports = (options) => ({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
+    }),
+    new OfflinePlugin(),
+    new WebpackPwaManifest({
+      name: 'React Wilks Calculator',
+      short_name: 'Wilks Calculator',
+      background_color: '#2196f3',
+      theme_color: '#2196f3',
+      icons: [
+        {
+          src: path.resolve('app/images/favicon.png'),
+          sizes: [96, 128, 192, 256, 384, 512]
+        },
+      ]
     })
   ]),
   resolve: {
