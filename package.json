@@ -2,6 +2,7 @@
   "name": "react.wilks",
   "version": "1.0.0",
   "description": "Simple Wilks Calculator (powerlifting) created with React as Progressive Web App.",
+  "homepage": "https://carq.github.io/React.Wilks/",
   "repository": {
     "type": "git",
     "url": "git@github.com:Carq/React.Wilks.git"
@@ -22,7 +23,8 @@
     "pretest": "npm run test:clean && npm run lint",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:clean": "rimraf ./coverage",
-    "test:watch": "cross-env NODE_ENV=test jest --watchAll"
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
@@ -33,6 +35,7 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "express": "4.17.1",
     "fontfaceobserver": "2.1.0",
+    "gh-pages": "^2.2.0",
     "history": "4.9.0",
     "hoist-non-react-statics": "3.3.0",
     "invariant": "2.2.4",
